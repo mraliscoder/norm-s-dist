@@ -19,7 +19,7 @@ const translations = {
             'resultSquared': 'Результат²:',
             'formula': 'Для вероятности = 0.5, Z = 0'
         },
-        'footer': '© 2025'
+        'footer': '© '
     },
     'en': {
         'title': 'Normal Distribution Calculator',
@@ -41,6 +41,6 @@ const translations = {
             'resultSquared': 'Result²:',
             'formula': 'For probability = 0.5, Z = 0'
         },
-        'footer': '© 2025'
+        'footer': '© '
     }
 }; 
