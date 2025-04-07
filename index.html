@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Normal Distribution Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+            <h1 data-i18n="title">Normal Distribution Calculator</h1>
+            <div class="description" data-i18n="description">
+                Excel-based functions for calculating normal distribution and inverse normal distribution
+            </div>
+        </header>
+
+        <div class="calculator-container">
+            <div class="calculator">
+                <h2 data-i18n="normSDist.title">NORM.S.DIST</h2>
+                <div class="input-group">
+                    <label for="normSDist-z" data-i18n="normSDist.xValue">X Value:</label>
+                    <input type="number" id="normSDist-z" step="0.01" value="0">
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="normSDist-cumulative" checked>
+                        <span data-i18n="normSDist.cumulative">F₀</span>
+                    </label>
+                </div>
+                <button id="calculate-normSDist" data-i18n="normSDist.calculate">Calculate</button>
+                
+                <div class="result-container" id="normSDist-results">
+                    <div class="result-row">
+                        <span class="result-label" data-i18n="normSDist.result">Result:</span>
+                        <span class="result-value" id="normSDist-result">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label" data-i18n="normSDist.resultSquared">Result²:</span>
+                        <span class="result-value" id="normSDist-result-squared">-</span>
+                    </div>
+                </div>
+                
+                <div class="formula" data-i18n="normSDist.formula">
+                    For X = 0, F₀(X) = 0.5 or P(X) = 0.3989
+                </div>
+            </div>
+
+            <div class="calculator">
+                <h2 data-i18n="normSInv.title">NORM.S.INV</h2>
+                <div class="input-group">
+                    <label for="normSInv-probability" data-i18n="normSInv.probability">Probability (0-1):</label>
+                    <input type="number" id="normSInv-probability" step="0.01" min="0" max="1" value="0.5">
+                </div>
+                <button id="calculate-normSInv" data-i18n="normSInv.calculate">Calculate</button>
+                
+                <div class="result-container" id="normSInv-results">
+                    <div class="result-row">
+                        <span class="result-label" data-i18n="normSInv.result">Result:</span>
+                        <span class="result-value" id="normSInv-result">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label" data-i18n="normSInv.resultSquared">Result²:</span>
+                        <span class="result-value" id="normSInv-result-squared">-</span>
+                    </div>
+                </div>
+                
+                <div class="formula" data-i18n="normSInv.formula">
+                    For probability = 0.5, Z = 0
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><span data-i18n="footer">© 2025</span> <a href="https://edwardcode.net/">Eduard Ilin, edwardcode.net</a></p>
+        </footer>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
